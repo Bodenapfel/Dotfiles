@@ -19,5 +19,5 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
-alias conf='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
