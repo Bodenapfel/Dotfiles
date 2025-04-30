@@ -500,5 +500,7 @@
   "bar.customModules.ram.label": true,
   "bar.customModules.ram.round": false,
   "bar.customModules.cpu.round": true,
-  "theme.bar.buttons.modules.ram.spacing": "0.5em"
+  "theme.bar.buttons.modules.ram.spacing": "0.5em",
+  "menus.dashboard.powermenu.avatar.image": "~/.face.icon",
+  "menus.dashboard.controls.enabled": true
 }
