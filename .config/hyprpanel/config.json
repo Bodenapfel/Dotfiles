@@ -506,5 +506,5 @@
   "bar.autoHide": "never",
   "menus.dashboard.shortcuts.left.shortcut3.command": "vesktop",
   "menus.dashboard.shortcuts.left.shortcut3.tooltip": "Vesktop",
-  "theme.bar.layer": "background"
+  "theme.bar.layer": "bottom"
 }
