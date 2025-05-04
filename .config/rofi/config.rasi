@@ -12,22 +12,22 @@
     background1: rgba(54, 54, 54, 0.68);
     background: rgba(1, 1, 1, 0.0);
     foreground:rgb(255, 255, 255);
-    color0:     #33A279;
-    color1:     #33A279;
-    color2:     #33A279;
-    color3:     #33A279;
-    color4:     #33A279;
-    color5:     #33A279;
-    color6:     #33A279;
-    color7:     #33A279;
-    color8:     #33A279;
-    color9:     #33A279;
-    color10:    #33A279;
-    color11:    #33A279;
-    color12:    #33A279;
-    color13:    #33A279;
-    color14:    #33A279;
-    color15:    #33A279 ;
+    color0:     #62A0EAd9;
+    color1:     #62A0EAd9;
+    color2:     #62A0EAd9;
+    color3:     #62A0EAd9;
+    color4:     #62A0EAd9;
+    color5:     #62A0EAd9;
+    color6:     #62A0EAd9;
+    color7:     #62A0EAd9;
+    color8:     #62A0EAd9;
+    color9:     #62A0EAd9;
+    color10:    #62A0EAd9;
+    color11:    #62A0EAd9;
+    color12:    #62A0EAd9;
+    color13:    #62A0EAd9;
+    color14:    #62A0EAd9;
+    color15:    #62A0EAd9 ;
 }
 
 * { border-width: 0px; }
@@ -61,7 +61,7 @@ window {
     margin:                       0px; 
     color:                        #33ccffee;
     border:                       3px;
-    border-color:                 #46ff96d9;
+    border-color:                 #99C1F1d9;
     cursor:                       "default";
     transparency:                 "real";
     location:                     center;
