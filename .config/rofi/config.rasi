@@ -9,7 +9,7 @@
 */
 
 * {
-    background1: rgba(54, 54, 54, 0.68);
+    background1: rgba(54, 54, 54, 0.81);
     background: rgba(1, 1, 1, 0.0);
     foreground:rgb(255, 255, 255);
     color0:     #62A0EAd9;
@@ -35,7 +35,7 @@
 /* ---- Configuration ---- */
 configuration {
     modi:                       "drun,run";
-    font:                       "Fira Sans 11";
+    font:                       "JetBrainsMono Nerd Font";
     show-icons:                 true;
     icon-theme:                 "kora";
     display-drun:               "APPS";

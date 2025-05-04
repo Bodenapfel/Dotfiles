@@ -27,7 +27,7 @@
   "theme.bar.buttons.hover": "#434c53",
   "theme.bar.buttons.background": "#4c566a",
   "theme.bar.menus.text": "#d8dee9",
-  "theme.bar.menus.border.color": "#434c53",
+  "theme.bar.menus.border.color": "#313244",
   "theme.bar.buttons.media.background": "#3b4252",
   "theme.bar.menus.menu.volume.text": "#d8dee9",
   "theme.bar.menus.menu.volume.card.color": "#3b4252",
@@ -483,7 +483,7 @@
   "theme.bar.menus.monochrome": true,
   "theme.bar.menus.opacity": 100,
   "theme.bar.menus.card_radius": "0.4em",
-  "theme.bar.menus.border.size": "0.13em",
+  "theme.bar.menus.border.size": "0.2em",
   "theme.bar.border.width": "0.15em",
   "theme.bar.buttons.separator.width": "0.1em",
   "theme.bar.buttons.separator.margins": "0.15em",
@@ -513,5 +513,11 @@
   "wallpaper.enable": false,
   "wallpaper.pywal": false,
   "theme.matugen_settings.scheme_type": "tonal-spot",
-  "bar.workspaces.numbered_active_indicator": "highlight"
+  "bar.workspaces.numbered_active_indicator": "highlight",
+  "theme.bar.menus.popover.radius": "0.4em",
+  "theme.bar.menus.border.radius": "0.5em",
+  "theme.font.name": "JetBrainsMono Nerd Font",
+  "theme.font.label": "JetBrainsMono Nerd Font Semi-Bold",
+  "bar.customModules.cpu.label": true,
+  "theme.bar.buttons.modules.cpu.enableBorder": false
 }
