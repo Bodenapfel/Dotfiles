@@ -498,7 +498,7 @@
   "menus.dashboard.shortcuts.left.shortcut1.icon": "",
   "bar.customModules.ram.labelType": "used",
   "bar.customModules.ram.label": true,
-  "bar.customModules.ram.round": false,
+  "bar.customModules.ram.round": true,
   "bar.customModules.cpu.round": true,
   "theme.bar.buttons.modules.ram.spacing": "0.5em",
   "menus.dashboard.powermenu.avatar.image": "~/.face.icon",
@@ -519,5 +519,16 @@
   "theme.font.name": "JetBrainsMono Nerd Font",
   "theme.font.label": "JetBrainsMono Nerd Font Semi-Bold",
   "bar.customModules.cpu.label": true,
-  "theme.bar.buttons.modules.cpu.enableBorder": false
+  "theme.bar.buttons.modules.cpu.enableBorder": false,
+  "menus.dashboard.stats.enabled": true,
+  "bar.customModules.cpu.middleClick": "lact",
+  "bar.customModules.ram.middleClick": "lact",
+  "bar.customModules.cpu.pollingInterval": 2000,
+  "bar.customModules.netstat.pollingInterval": 2000,
+  "bar.customModules.kbLayout.labelType": "code",
+  "theme.bar.buttons.modules.updates.enableBorder": false,
+  "bar.customModules.updates.pollingInterval": 21600000,
+  "bar.customModules.netstat.rateUnit": "auto",
+  "bar.customModules.netstat.dynamicIcon": true,
+  "bar.customModules.netstat.label": false
 }

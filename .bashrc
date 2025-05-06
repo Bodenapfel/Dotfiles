@@ -20,4 +20,5 @@ function y() {
 	rm -f -- "$tmp"
 }
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-
+alias neofetch='fastfetch -c neofetch'
+# fastfetch
