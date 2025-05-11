@@ -516,8 +516,8 @@
   "bar.workspaces.numbered_active_indicator": "highlight",
   "theme.bar.menus.popover.radius": "0.4em",
   "theme.bar.menus.border.radius": "0.5em",
-  "theme.font.name": "JetBrainsMono Nerd Font",
-  "theme.font.label": "JetBrainsMono Nerd Font Semi-Bold",
+  "theme.font.name": "FiraCode Nerd Font",
+  "theme.font.label": "FiraCode Nerd Font",
   "bar.customModules.cpu.label": true,
   "theme.bar.buttons.modules.cpu.enableBorder": false,
   "menus.dashboard.stats.enabled": true,
@@ -530,5 +530,6 @@
   "bar.customModules.updates.pollingInterval": 21600000,
   "bar.customModules.netstat.rateUnit": "auto",
   "bar.customModules.netstat.dynamicIcon": true,
-  "bar.customModules.netstat.label": false
+  "bar.customModules.netstat.label": false,
+  "theme.font.style": "normal"
 }
