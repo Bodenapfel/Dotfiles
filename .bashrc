@@ -16,7 +16,8 @@ function y() {
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
+# PS1='[\u@\h \W]\$ '
+PS1='\W \$ '
 alias hypr='hyprland'
 alias windows='sudo grub-reboot 2 && sudo shutdown -r now'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
