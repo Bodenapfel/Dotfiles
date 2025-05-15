@@ -9,7 +9,7 @@
 */
 
 * {
-    background1: rgba(54, 54, 54, 0.81);
+    background1:rgba(31, 31, 31, 0.8);
     background: rgba(1, 1, 1, 0.0);
     foreground:rgb(255, 255, 255);
     color0:     #62A0EAd9;
