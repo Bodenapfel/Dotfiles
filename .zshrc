@@ -24,4 +24,6 @@ function y() {
 alias hypr='hyprland'
 alias windows='sudo grub-reboot 2 && sudo shutdown -r now' alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias neofetch='fastfetch -c neofetch'
-alias vi='nvim'
+# startup commands:
+cowthink -f tux $(fortune -s)
+
