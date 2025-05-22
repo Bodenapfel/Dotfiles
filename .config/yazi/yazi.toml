@@ -6,11 +6,11 @@
 ratio          = [ 1, 4, 3 ]
 sort_by        = "alphabetical"
 sort_sensitive = false
-sort_reverse   = false
+sort_reverse 	 = false
 sort_dir_first = true
 sort_translit  = false
 linemode       = "none"
-show_hidden    = true
+show_hidden    = false
 show_symlink   = true
 scrolloff      = 5
 mouse_events   = [ "click", "scroll" ]
@@ -36,7 +36,6 @@ edit = [
 	{ run = 'code -w %*', block = true,  desc = "code (block)",   for = "windows" },
 ]
 open = [
-	{ run = 'loupe "$1"', desc = "Open with Loupe", for = "linux" },
 	{ run = 'xdg-open "$1"',                desc = "Open", for = "linux" },
 	{ run = 'open "$@"',                    desc = "Open", for = "macos" },
 	{ run = 'start "" "%1"', orphan = true, desc = "Open", for = "windows" },
