@@ -35,7 +35,7 @@
 /* ---- Configuration ---- */
 configuration {
     modi:                       "drun,run";
-    font:                       "JetBrainsMono Nerd Font";
+    font:                       "ComicShannsMono Nerd Font 13";
     show-icons:                 true;
     icon-theme:                 "kora";
     display-drun:               "APPS";
@@ -271,3 +271,4 @@ error-message {
     background-color:            @background;
     text-color:                  @foreground;
 }
+

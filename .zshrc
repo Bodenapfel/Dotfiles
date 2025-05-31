@@ -35,6 +35,7 @@ alias grep='grep --color=auto'
 alias hypr='hyprland'
 alias windows='sudo grub-reboot 2 && sudo shutdown -r now' alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias neofetch='fastfetch -c neofetch'
+alias clfetch='clear && fastfetch'
 
 # startup commands:
 if [[ -z $NO_COWSAY ]]; then
