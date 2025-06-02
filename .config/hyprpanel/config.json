@@ -553,5 +553,8 @@
   "theme.bar.buttons.workspaces.smartHighlight": true,
   "theme.bar.buttons.workspaces.numbered_active_highlight_padding": "0.2em",
   "theme.bar.buttons.workspaces.numbered_active_highlight_border": "0.2em",
-  "theme.bar.buttons.workspaces.numbered_inactive_padding": "0.2em"
+  "theme.bar.buttons.workspaces.numbered_inactive_padding": "0.2em",
+  "bar.volume.rightClick": "pavucontrol",
+  "bar.bluetooth.rightClick": "blueman-manager",
+  "theme.bar.buttons.bluetooth.enableBorder": false
 }
