@@ -501,7 +501,7 @@
   "bar.customModules.ram.round": true,
   "bar.customModules.cpu.round": true,
   "theme.bar.buttons.modules.ram.spacing": "0.5em",
-  "menus.dashboard.powermenu.avatar.image": "~/.face.icon",
+  "menus.dashboard.powermenu.avatar.image": "/home/dk/.config/ml4w/wallpapers/mojave.jpg",
   "menus.dashboard.controls.enabled": true,
   "bar.autoHide": "never",
   "menus.dashboard.shortcuts.left.shortcut3.command": "vesktop",
@@ -556,5 +556,6 @@
   "theme.bar.buttons.workspaces.numbered_inactive_padding": "0.2em",
   "bar.volume.rightClick": "pavucontrol",
   "bar.bluetooth.rightClick": "blueman-manager",
-  "theme.bar.buttons.bluetooth.enableBorder": false
+  "theme.bar.buttons.bluetooth.enableBorder": false,
+  "theme.bar.menus.menu.notifications.pager.show": true
 }

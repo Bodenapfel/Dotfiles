@@ -34,7 +34,7 @@
 
 /* ---- Configuration ---- */
 configuration {
-    modi:                       "drun,run";
+    modi:                       "emoji,calc,window,drun,run";
     font:                       "ComicShannsMono Nerd Font 13";
     show-icons:                 true;
     icon-theme:                 "kora";
@@ -271,4 +271,3 @@ error-message {
     background-color:            @background;
     text-color:                  @foreground;
 }
-
