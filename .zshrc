@@ -33,7 +33,8 @@ export LS_COLORS='di=01;34:ln=01;36:or=01;31:ex=01;32:fi=00:bd=40;33;01:cd=40;33
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias hypr='hyprland'
-alias windows='sudo grub-reboot 2 && sudo shutdown -r now' alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias windows='sudo systemctl reboot --boot-loader-entry=auto-windows'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias neofetch='fastfetch -c neofetch'
 alias clfetch='clear && fastfetch'
 
@@ -41,3 +42,4 @@ alias clfetch='clear && fastfetch'
 if [[ -z $NO_COWSAY ]]; then
   cowthink -f tux $(fortune -s)
 fi
+alias paru='yay'

@@ -470,9 +470,9 @@
   "menus.dashboard.shortcuts.left.shortcut2.command": "steam",
   "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Steam",
   "bar.customModules.cpu.rightClick": "kitty btop",
-  "bar.customModules.cpu.leftClick": "kitty htop",
+  "bar.customModules.cpu.leftClick": "kitty btop",
   "bar.customModules.ram.rightClick": "kitty btop",
-  "bar.customModules.ram.leftClick": "kitty htop",
+  "bar.customModules.ram.leftClick": "kitty btop",
   "theme.bar.opacity": 100,
   "theme.bar.transparent": false,
   "theme.bar.buttons.monochrome": true,
@@ -487,7 +487,7 @@
   "theme.bar.border.width": "0.15em",
   "theme.bar.buttons.separator.width": "0.1em",
   "theme.bar.buttons.separator.margins": "0.15em",
-  "bar.launcher.autoDetectIcon": true,
+  "bar.launcher.autoDetectIcon": false,
   "theme.bar.buttons.dashboard.enableBorder": false,
   "theme.bar.outer_spacing": "0.0em",
   "theme.bar.buttons.y_margins": "0.0em",
@@ -532,7 +532,7 @@
   "bar.customModules.netstat.dynamicIcon": true,
   "bar.customModules.netstat.label": false,
   "theme.font.style": "normal",
-  "theme.font.size": "1.2rem",
+  "theme.font.size": "1.3rem",
   "theme.bar.menus.menu.dashboard.scaling": 90,
   "theme.bar.menus.popover.scaling": 90,
   "theme.bar.menus.menu.power.scaling": 90,
@@ -557,5 +557,8 @@
   "bar.volume.rightClick": "pavucontrol",
   "bar.bluetooth.rightClick": "blueman-manager",
   "theme.bar.buttons.bluetooth.enableBorder": false,
-  "theme.bar.menus.menu.notifications.pager.show": true
+  "theme.bar.menus.menu.notifications.pager.show": true,
+  "bar.customModules.storage.paths": [
+    "/"
+  ]
 }
