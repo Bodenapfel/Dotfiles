@@ -43,4 +43,3 @@ if [[ -z $NO_COWSAY ]]; then
   cowthink -f tux $(fortune -s)
 fi
 alias paru='yay'
-alias test='cowsay'
