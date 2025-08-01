@@ -42,4 +42,4 @@ alias clfetch='clear && fastfetch'
 if [[ -z $NO_COWSAY ]]; then
   cowthink -f tux $(fortune -s)
 fi
-alias paru='yay'
+alias yay='paru'
