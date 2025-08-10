@@ -1,4 +1,3 @@
-
 # The following lines were added by compinstall
 zstyle :compinstall filename '/root/.zshrc'
 
@@ -12,12 +11,14 @@ compinit
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+
 bindkey -v
 
 # End of lines configured by zsh-newuser-install
+
 PS1='%1~ %# '
 
-# yazi config:	
+# yazi config:
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -33,13 +34,13 @@ export LS_COLORS='di=01;34:ln=01;36:or=01;31:ex=01;32:fi=00:bd=40;33;01:cd=40;33
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias hypr='hyprland'
-alias windows='sudo systemctl reboot --boot-loader-entry=auto-windows'
+alias windows='sudo efibootmgr --bootnext 0000 && reboot'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias neofetch='fastfetch -c neofetch'
 alias clfetch='clear && fastfetch'
+alias yay='paru'
 
 # startup commands:
 if [[ -z $NO_COWSAY ]]; then
   cowthink -f tux $(fortune -s)
 fi
-alias yay='paru'
