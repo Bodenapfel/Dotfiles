@@ -496,7 +496,7 @@
   "theme.bar.buttons.radius": "0.3em",
   "theme.bar.dropdownGap": "2.7em",
   "menus.dashboard.shortcuts.left.shortcut1.icon": "",
-  "bar.customModules.ram.labelType": "free",
+  "bar.customModules.ram.labelType": "used",
   "bar.customModules.ram.label": true,
   "bar.customModules.ram.round": true,
   "bar.customModules.cpu.round": true,
