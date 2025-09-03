@@ -1,52 +1,41 @@
-# hard no
+# critical
 .ssh/
 .gnupg/
 .netrc
 .aws/
 .azure/
 docker/config.json
-**/token
-**/*token*
-**/*_token*
-**/*secret*
-**/*password*
 **/.env
 **/*.env
 **/credentials*
 **/id_*
+**/*secret*
+**/*token*
+**/*password*
 **/*service-account*.json
 **/*oauth*.json
 
-# likely leaks
+# local junk
 .local/
 .cache/
+
+# browsers & sync clients
 mozilla/
 chromium/
 brave/
 google-chrome/
-Code/User/
 Obsidian/
 pcloud/
 dropbox/
 Nextcloud/
 rclone/
+
+# networking
 NetworkManager/
 wireguard/
 openvpn/
-gnome-keyring/
-kwallet/
 
-# package managers & langs
-.npmrc
-.pypirc
-pip/pip.conf
-gem/credentials
-composer/auth.json
-cargo/credentials
-go/env
-nuget.config
-
-# editors / noise
+# editors / misc noise
 *.swp
 *.swo
 *.DS_Store
