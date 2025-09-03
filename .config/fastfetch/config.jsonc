@@ -5,7 +5,6 @@
     "type": "auto",
     "source": "arch",
     "width": 20,
-    "height": 1,
     "padding": { "top": 0, "left": 0, "right": 2 },
     "color": { "1": "#99C1F1", "2": "#99C1F1" }
   },
