@@ -1,0 +1,53 @@
+# hard no
+.ssh/
+.gnupg/
+.netrc
+.aws/
+.azure/
+docker/config.json
+**/token
+**/*token*
+**/*_token*
+**/*secret*
+**/*password*
+**/.env
+**/*.env
+**/credentials*
+**/id_*
+**/*service-account*.json
+**/*oauth*.json
+
+# likely leaks
+.local/
+.cache/
+mozilla/
+chromium/
+brave/
+google-chrome/
+Code/User/
+Obsidian/
+pcloud/
+dropbox/
+Nextcloud/
+rclone/
+NetworkManager/
+wireguard/
+openvpn/
+gnome-keyring/
+kwallet/
+
+# package managers & langs
+.npmrc
+.pypirc
+pip/pip.conf
+gem/credentials
+composer/auth.json
+cargo/credentials
+go/env
+nuget.config
+
+# editors / noise
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
