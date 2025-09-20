@@ -39,7 +39,8 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias neofetch='fastfetch -c neofetch'
 alias clfetch='clear && fastfetch'
 alias yay='paru'
-
+alias hetzner='ssh root@188.34.196.140'
+alias minecraft='ssh minecraft@188.34.196.140'
 # startup commands:
 if [[ -z $NO_COWSAY ]]; then
   cowthink -f tux $(fortune -s)
