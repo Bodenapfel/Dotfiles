@@ -2,7 +2,7 @@
   "terminal": "kitty",
   "theme.bar.floating": false,
   "theme.bar.buttons.enableBorders": false,
-  "menus.volume.raiseMaximumVolume": false,
+  "menus.volume.raiseMaximumVolume": true,
   "menus.clock.time.military": true,
   "menus.clock.weather.location": "Regensburg",
   "menus.clock.weather.key": "8fda265bdbd64cea8cc194745253004",
