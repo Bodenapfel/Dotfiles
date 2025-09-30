@@ -22,21 +22,21 @@ return {
       vim.cmd.colorscheme("catppuccin")
 
       -- Optional: force remove backgrounds from main UI elements
-      local groups = {
-        "Normal",
-        "NormalNC",
-        "NormalFloat",
-        "FloatBorder",
-        "VertSplit",
-        "SignColumn",
-        "StatusLine",
-        "StatusLineNC",
-        "EndOfBuffer",
-        "TabLineFill",
-      }
-      for _, group in ipairs(groups) do
-        vim.api.nvim_set_hl(0, group, { bg = "none" })
-      end
+      -- local groups = {
+      --   "Normal",
+      --   "NormalNC",
+      --   "NormalFloat",
+      --   "FloatBorder",
+      --   "VertSplit",
+      --   "SignColumn",
+      --   "StatusLine",
+      --   "StatusLineNC",
+      --   "EndOfBuffer",
+      --   "TabLineFill",
+      -- }
+      -- for _, group in ipairs(groups) do
+      --   vim.api.nvim_set_hl(0, group, { bg = "none" })
+      -- end
     end,
   },
 

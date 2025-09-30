@@ -41,6 +41,7 @@ alias clfetch='clear && fastfetch'
 alias yay='paru'
 alias hetzner='ssh root@188.34.196.140'
 alias minecraft='ssh minecraft@188.34.196.140'
+alias mcmount='sshfs minecraft@188.34.196.140:/home/minecraft ~/remote'
 # startup commands:
 if [[ -z $NO_COWSAY ]]; then
   cowthink -f tux $(fortune -s)
