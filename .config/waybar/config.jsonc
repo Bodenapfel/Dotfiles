@@ -1,0 +1,122 @@
+{
+  "layer": "top",
+  "modules-left": [
+    "hyprland/workspaces",
+    "mpris"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "bluetooth",
+    "pulseaudio",
+    "clock",
+    "tray",
+    "custom/notification"
+  ],
+  "hyprland/window": {
+    "icon": true,
+    "format": "{class}"
+  },
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "show-special": true,
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+  "bluetooth": {
+    // "controller": "controller1",
+    "on-click": "blueman-manager",
+    "format": "<span foreground=\"#99c1f2\"> </span>on",
+    "format-disabled": "<span foreground=\"#99c1f2\"> </span>off",
+    "format-connected": "<span foreground=\"#99c1f2\"> </span>{num_connections} connected",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  },
+  "mpris": {
+    "format": "{player_icon}{title}",
+    "format-paused": "{status_icon}{title}",
+    "player-icons": {
+      "default": " "
+    },
+    "status-icons": {
+      "paused": " "
+    },
+    "tooltip-format": "{dynamic}"
+  },
+  "clock": {
+    "interval": 1,
+    "format": "<span color=\"#99c1f2\">󰃰 </span> {:%H:%M:%S}",
+    "tooltip": true,
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "mode": "month",
+      "weeks-pos": "right",
+      "format": {
+        "months": "<span color='#739ade'><b>{}</b></span>",
+        "days": "<span color='#ffffff'><b>{}</b></span>",
+        "weeks": "<span color='#99c1f2'><b>W{}</b></span>",
+        "weekdays": "<span color='#99c1f2'><b>{}</b></span>",
+        "today": "<span color='#739ade'><b><u>{}</u></b></span>"
+      },
+      "actions": {}
+    }
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    "icons": {
+      "blueman": "bluetooth"
+    }
+  },
+  "cpu": {
+    "format": "<span color=\"#99c1f2\"> </span> {usage}%",
+    "on-click": "kitty btop",
+    "tooltip": true
+  },
+  "memory": {
+    "format": "<span color=\"#99c1f2\"> </span> {percentage}%",
+    "on-click": "kitty btop",
+    "tooltip": true
+  },
+  "pulseaudio": {
+    "format": "<span color=\"#99c1f2\">{icon}</span>{volume}%",
+    "format-muted": "<span color=\"#99c1f2\">  </span>{volume}%",
+    "format-icons": {
+      "default": [
+        " ",
+        " ",
+        "  "
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground=\"#99c1f2\">󰂚 </span><span foreground='red'><sup></sup></span>",
+      "none": "<span foreground=\"#99c1f2\">󰂚 </span>",
+      "dnd-notification": "<span foreground=\"#99c1f2\">󰂛 </span><span foreground='red'><sup></sup></span>",
+      "dnd-none": "<span foreground=\"#99c1f2\">󰂛 </span>",
+      "inhibited-notification": "<span foreground=\"#99c1f2\">󰂚 </span><span foreground='red'><sup></sup></span>",
+      "inhibited-none": "<span foreground=\"#99c1f2\">󰂛 </span>",
+      "dnd-inhibited-notification": "<span foreground=\"#99c1f2\">󰂚 </span><span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": "<span foreground=\"#99c1f2\">󰂛 </span>"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  }
+}
