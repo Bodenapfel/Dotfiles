@@ -6,11 +6,12 @@
   font-weight: bold;
   min-height: 2px;
 }
+
 @define-color bg rgba(32, 37, 53, 1.0);
 @define-color text rgba(255, 255, 255, 1.0);
 @define-color grey rgba(150, 150, 150, 1.0);
 @define-color blue rgba(153, 193, 242, 1.0);
-@define-color dark-blue rgba(103, 143, 202, 1.0);
+@define-color dark-blue rgba(113, 153, 222, 1.0);
 @define-color green rgba(80, 135, 80, 1.0);
 
 window#waybar {
@@ -30,7 +31,6 @@ tooltip label {
 
 #tray {
   padding: 0 10px;
-  border-radius: 5;
 }
 
 #tray menu {
@@ -41,6 +41,11 @@ tooltip label {
 
 #workspaces {
   padding: 0 10px;
+  font-size: 24;
+}
+
+#workspaces label {
+  font-size: 24;
 }
 
 #workspaces button {
@@ -125,4 +130,3 @@ tooltip label {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-
