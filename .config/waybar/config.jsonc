@@ -37,9 +37,9 @@
     "format": "<span foreground=\"#99c1f2\"> </span>on",
     "format-disabled": "<span foreground=\"#99c1f2\"> </span>off",
     "format-connected": "<span foreground=\"#99c1f2\"> </span>{num_connections} connected",
-    "tooltip-format": "{controller_alias}\t{controller_address}",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    "tooltip-format": " {device_alias}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%"
   },
   "mpris": {
     "format": "{player_icon}{title}",
@@ -73,7 +73,11 @@
   "tray": {
     "icon-size": 21,
     "spacing": 10,
-    "icons": {}
+    "icons": {
+      "ZapZap": "whatsapp",
+      "steam": "steam",
+      "vesktop": "discord"
+    }
   },
   "cpu": {
     "format": "<span color=\"#99c1f2\"> </span> {usage}%",
