@@ -36,10 +36,10 @@
     "on-click": "blueman-manager",
     "format": "<span foreground=\"#99c1f2\"> </span>on",
     "format-disabled": "<span foreground=\"#99c1f2\"> </span>off",
-    "format-connected": "<span foreground=\"#99c1f2\"> </span>{num_connections} connected",
-    "tooltip-format": " {device_alias}",
+    "format-connected": "<span foreground=\"#99c1f2\"> </span>{num_connections}",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
     "tooltip-format-connected": "{device_enumerate}",
-    "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%"
+    "tooltip-format-enumerate-connected": "{device_alias} {device_battery_percentage}%"
   },
   "mpris": {
     "format": "{player_icon}{title}",
@@ -71,7 +71,7 @@
     }
   },
   "tray": {
-    "icon-size": 21,
+    "icon-size": 24,
     "spacing": 10,
     "icons": {
       "ZapZap": "whatsapp",
@@ -99,7 +99,7 @@
         "  "
       ]
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol -t 3"
   },
   "custom/notification": {
     "tooltip": false,
