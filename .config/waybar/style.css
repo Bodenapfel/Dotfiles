@@ -72,7 +72,6 @@ tooltip label {
   color: @bg;
   background: @dark-blue;
   border-radius: 5;
-  margin: 0.25em;
 }
 
 #memory {
