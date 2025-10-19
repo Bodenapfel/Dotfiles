@@ -53,19 +53,19 @@ tooltip label {
   font-size: 20;
   background: transparent;
   color: @dark-blue;
-  margin: 0.25em;
+  padding: 0 4px;
+  margin: 5px 4px;
+
 }
 
 #workspaces button.empty {
   color: @grey;
-  margin: 0.25em;
 }
 
 #workspaces button.visible {
   color: @bg;
   background: @blue;
   border-radius: 5;
-  margin: 0.25em;
 }
 
 #workspaces button:hover {

@@ -45,10 +45,10 @@
     "format": "{player_icon}{title}",
     "format-paused": "{status_icon}{title}",
     "player-icons": {
-      "default": " "
+      "default": "<span foreground=\"#99c1f2\"> </span>"
     },
     "status-icons": {
-      "paused": " "
+      "paused": "<span foreground=\"#99c1f2\"> </span>"
     },
     "tooltip-format": "{dynamic}"
   },
