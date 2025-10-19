@@ -1,5 +1,5 @@
 * {
-    background1:rgba(31, 31, 31, 0.8);
+    background1:rgba(32, 37, 53, 0.7);
     background: rgba(1, 1, 1, 0.0);
     foreground:rgb(255, 255, 255);
     color0:     #62A0EAd9;
@@ -49,7 +49,7 @@ window {
     spacing:                      0px;
     padding:                      0px;
     margin:                       0px; 
-    color:                        #33ccffee;
+    color:                        #99C1F1d9;
     border:                       3px;
     border-color:                 #99C1F1d9;
     cursor:                       "default";
