@@ -2,12 +2,10 @@
   border: none;
   border-radius: 0;
   font-family: "ComicShannsMono Nerd Font", monospace;
-  font-size: 20;
+  font-size: 20px;
   font-weight: bold;
   min-height: 2px;
 }
-
-#212636ff;
 
 @define-color bg rgba(32, 37, 53, 1.0);
 @define-color text rgba(255, 255, 255, 1.0);
@@ -24,7 +22,7 @@ window#waybar {
 tooltip {
   background: @bg;
   border: 3px solid rgba(100, 114, 125, 0.5);
-  border-radius: 5;
+  border-radius: 5px;
 }
 
 tooltip label {
@@ -38,21 +36,21 @@ tooltip label {
 #tray menu {
   background: @bg;
   border: 3px solid rgba(100, 114, 125, 0.5);
-  border-radius: 5;
+  border-radius: 5px;
 }
 
 #workspaces {
   padding: 0 10px;
-  font-size: 24;
+  font-size: 24px;
 }
 
 #workspaces label {
-  font-size: 24;
+  font-size: 24px;
 }
 
 #workspaces button {
   padding: 1px;
-  font-size: 20;
+  font-size: 20px;
   background: transparent;
   color: @dark-blue;
   padding: 0 4px;
@@ -67,13 +65,13 @@ tooltip label {
 #workspaces button.visible {
   color: @bg;
   background: @blue;
-  border-radius: 5;
+  border-radius: 5px;
 }
 
 #workspaces button:hover {
   color: @bg;
   background: @dark-blue;
-  border-radius: 5;
+  border-radius: 5px;
 }
 
 #memory {
