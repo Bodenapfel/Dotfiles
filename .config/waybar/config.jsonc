@@ -50,7 +50,8 @@
     "status-icons": {
       "paused": "<span foreground=\"#99C1F1\"> </span>"
     },
-    "tooltip-format": "{dynamic}"
+    "tooltip-format": "{dynamic}",
+    "max-length": 50
   },
   "clock": {
     "interval": 1,
@@ -74,7 +75,6 @@
     "icon-size": 24,
     "spacing": 10,
     "icons": {
-      "ZapZap": "whatsapp",
       "steam": "steam",
       "vesktop": "discord"
     }

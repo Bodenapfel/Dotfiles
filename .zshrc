@@ -43,6 +43,9 @@ if [[ -z $NO_COWSAY ]]; then
   cowthink -f tux $(fortune -s)
 fi
 
+# more path config:
+export PATH="$HOME/.local/bin:$PATH"
+
 # aliases:
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -52,8 +55,8 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias clfetch='clear && fastfetch'
 alias yay='paru'
 alias hetzner='ssh root@188.34.196.140'
-alias server='ssh dk@192.168.178.69'
-alias ubumount='sshfs root@192.168.178.69:/ ~/remote/root@ubuntu'
-alias dkmount='sshfs dk@192.168.178.69:/home/dk/ ~/remote/dk@ubuntu'
+alias server='ssh dk@192.168.105.118'
+alias ubumount='sshfs root@192.168.105.118:/ ~/remote/root@ubuntu'
+alias dkmount='sshfs dk@192.168.105.118:/home/dk/ ~/remote/dk@ubuntu'
 alias minecraft='ssh minecraft@188.34.196.140'
 alias mcmount='sshfs minecraft@188.34.196.140:/home/minecraft ~/remote/minecraft@dido'
