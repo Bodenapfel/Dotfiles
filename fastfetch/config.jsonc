@@ -1,0 +1,63 @@
+{
+  "logo": {
+    "type": "builtin",
+    "source": "Fedora",
+    "printRemaining": true,
+    "padding": {
+      "top": 0,
+      "left": 0,
+      "right": 2
+    },
+    "color": {
+      "1": "#5277c3",
+      "2": "#7ebae4"
+    }
+  },
+  "display": {
+    "separator": ": ",
+    "color": {
+      "keys": "#7ebae4",
+      "title": "#5277c3"
+    },
+    "bar": {
+      "width": 10,
+      "char": {
+        "elapsed": "■",
+        "total": "-"
+      }
+    },
+    "percent": {
+      "type": 9,
+      "color": {
+        "green": "green",
+        "yellow": "light_yellow",
+        "red": "light_red"
+      }
+    }
+  },
+  "modules": [
+    "break",
+    "title",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    {
+      "type": "packages",
+      "format": "{rpm} (rpm), {appimage} (app), {flatpak-system} (fp-s), {flatpak-user} (fp-u)"
+    },
+    "shell",
+    "display",
+    "de",
+    "wm",
+    "font",
+    "terminal",
+    "terminalfont",
+    "cpu",
+    "gpu",
+    "memory",
+    "swap",
+    "localip",
+    "break"
+  ]
+}
