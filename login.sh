@@ -1,5 +1,5 @@
 #!/bin/bash
 
-# steam -silent &
-# discord --start-minimized &
+# systemd-run --user steam -silent &
+systemd-run --user discord --start-minimized &
 openrgb --profile "white1" &
