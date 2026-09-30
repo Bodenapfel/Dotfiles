@@ -1,5 +1,9 @@
 #!/bin/bash
 
-# systemd-run --user steam -silent &
-systemd-run --user discord --start-minimized &
-openrgb --profile "white1" &
+run() {
+    systemd-run --user --collect "$@" &
+}
+
+run steam -silent
+run discord --start-minimized
+run openrgb --profile "white1"
