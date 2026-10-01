@@ -42,6 +42,7 @@ alias dkmount='sshfs dk@192.168.105.118:/home/dk/ ~/remote/dk@ubuntu'
 alias media='sshfs dk@192.168.105.118:/data/ ~/remote/media'
 
 alias cpfonts='sudo rm -rf "$HOME/.local/share/fonts"; mkdir -p "$HOME/.local/share/fonts" && cp -L /run/current-system/sw/share/X11/fonts/* "$HOME/.local/share/fonts/"'
+alias tailget='sudo tailscale file get ~/Downloads'
 
 
 # ──────────────────────────────────────────────
