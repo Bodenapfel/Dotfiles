@@ -2,6 +2,11 @@
 # Oh My Zsh
 # ──────────────────────────────────────────────
 
+# auto update omz
+zstyle ':omz:update' mode auto
+# silently update omz
+# zstyle ':omz:update' verbose silent
+
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME=""
@@ -22,7 +27,7 @@ source "$ZSH/oh-my-zsh.sh"
 # ──────────────────────────────────────────────
 
 HISTFILE="$HOME/.zsh_history"
-HISTSIZE=10000
+HISTSIZE=50000
 SAVEHIST=10000
 
 
@@ -31,7 +36,7 @@ SAVEHIST=10000
 # ──────────────────────────────────────────────
 
 alias ll="ls -l"
-alias update="sudo nixos-rebuild switch"
+alias update='sudo dnf upgrade --refresh -y && flatpak update --user -y && sudo flatpak update --system -y'
 alias hypr="start-hyprland"
 alias clfetch="clear && fastfetch"
 
@@ -41,7 +46,8 @@ alias ubumount='sshfs root@192.168.105.118:/ ~/remote/root@ubuntu'
 alias dkmount='sshfs dk@192.168.105.118:/home/dk/ ~/remote/dk@ubuntu'
 alias media='sshfs dk@192.168.105.118:/data/ ~/remote/media'
 
-alias cpfonts='sudo rm -rf "$HOME/.local/share/fonts"; mkdir -p "$HOME/.local/share/fonts" && cp -L /run/current-system/sw/share/X11/fonts/* "$HOME/.local/share/fonts/"'
+# only for nixos, unsafe for fedora
+# alias cpfonts='sudo rm -rf "$HOME/.local/share/fonts"; mkdir -p "$HOME/.local/share/fonts" && cp -L /run/current-system/sw/share/X11/fonts/* "$HOME/.local/share/fonts/"'
 alias tailget='sudo tailscale file get ~/Downloads'
 
 
@@ -93,7 +99,8 @@ export VISUAL=nvim
 
 
 # >>> Codex installer >>>
-export PATH="/home/dk/.local/bin:$PATH"
+typeset -U path
+path=("$HOME/.local/bin" $path)
 # <<< Codex installer <<<
 
 
