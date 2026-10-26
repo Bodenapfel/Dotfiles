@@ -6,4 +6,5 @@ run() {
 
 run steam -silent
 run discord --start-minimized
-run openrgb --profile "white1"
+# handled via openrgb
+# run openrgb --profile "white1"

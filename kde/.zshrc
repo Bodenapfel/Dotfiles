@@ -48,7 +48,7 @@ alias media='sshfs dk@192.168.105.118:/data/ ~/remote/media'
 
 # only for nixos, unsafe for fedora
 # alias cpfonts='sudo rm -rf "$HOME/.local/share/fonts"; mkdir -p "$HOME/.local/share/fonts" && cp -L /run/current-system/sw/share/X11/fonts/* "$HOME/.local/share/fonts/"'
-alias tailget='sudo tailscale file get ~/Downloads'
+alias tailget='tailscale file get ~/Downloads'
 
 
 # ──────────────────────────────────────────────
@@ -122,3 +122,6 @@ codex() {
   quoted_args="${(j: :)${(q)@}}"
   tmux new-session -s "$session_name" "command codex ${quoted_args}"
 }
+
+# opencode
+export PATH=/home/dk/.opencode/bin:$PATH
