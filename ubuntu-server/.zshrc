@@ -38,7 +38,7 @@ function y() {
 export LS_COLORS='di=01;34:ln=01;36:or=01;31:ex=01;32:fi=00:bd=40;33;01:cd=40;33;01:so=01;35:pi=40;33'
 
 # custom prompt:
-PROMPT='%F{cyan}%B%n@%m %~ 
+PROMPT='%F{yellow}%B%n@%m %~ 
 >>%f%b '
 
 # terminal config:
