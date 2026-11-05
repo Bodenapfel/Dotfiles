@@ -1,11 +1,3 @@
-# The following lines were added by compinstall
-zstyle :compinstall filename '/root/.zshrc'
-
-autoload -Uz compinit
-compinit
-
-# End of lines added by compinstall
-
 # oh my zsh autoupdate config:
 zstyle ':omz:update' mode auto
 
@@ -38,7 +30,7 @@ function y() {
 export LS_COLORS='di=01;34:ln=01;36:or=01;31:ex=01;32:fi=00:bd=40;33;01:cd=40;33;01:so=01;35:pi=40;33'
 
 # custom prompt:
-PROMPT='%F{yellow}%B%n@%m %~ 
+PROMPT='%F{166}%B%n@%m %~ 
 >>%f%b '
 
 # terminal config:
@@ -47,10 +39,25 @@ export TERM='xterm-256color'
 # snap config:
 export PATH=$PATH:/snap/bin
 
-# enable nvm
+# Load NVM only when a Node command is first used.
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+_load_nvm() {
+    [[ ${_NVM_LOADED:-0} == 1 ]] && return 0
+    if [[ ! -s "$NVM_DIR/nvm.sh" ]]; then
+        print -u2 "NVM initialization file not found: $NVM_DIR/nvm.sh"
+        return 1
+    fi
+    unfunction nvm node npm npx corepack 2>/dev/null
+    source "$NVM_DIR/nvm.sh" || return
+    typeset -g _NVM_LOADED=1
+    [[ ! -s "$NVM_DIR/bash_completion" ]] || source "$NVM_DIR/bash_completion"
+    return 0
+}
+nvm() { _load_nvm && nvm "$@"; }
+node() { _load_nvm && command node "$@"; }
+npm() { _load_nvm && command npm "$@"; }
+npx() { _load_nvm && command npx "$@"; }
+corepack() { _load_nvm && command corepack "$@"; }
 
 # aliases:
 alias motd='run-parts /etc/update-motd.d/'
@@ -63,6 +70,7 @@ alias code-server-update='curl -fsSL https://code-server.dev/install.sh | sh'
 alias code='/snap/code/current/usr/share/code/bin/code'
 
 codex() {
+	_load_nvm || return
 	if [ -n "$TMUX" ]; then
 		command codex "$@"
 		return
