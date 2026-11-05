@@ -49,6 +49,7 @@ alias media='sshfs dk@192.168.105.118:/data/ ~/remote/media'
 # only for nixos, unsafe for fedora
 # alias cpfonts='sudo rm -rf "$HOME/.local/share/fonts"; mkdir -p "$HOME/.local/share/fonts" && cp -L /run/current-system/sw/share/X11/fonts/* "$HOME/.local/share/fonts/"'
 alias tailget='tailscale file get ~/Downloads'
+alias python='python3'
 
 
 # ──────────────────────────────────────────────
@@ -77,7 +78,7 @@ y() {
 # Prompt
 # ──────────────────────────────────────────────
 
-PROMPT='%F{blue}%B%n@%m %~
+PROMPT='%F{green}%B%n@%m %~
 >>%f%b '
 
 
@@ -121,6 +122,15 @@ codex() {
   session_name="codex-$i"
   quoted_args="${(j: :)${(q)@}}"
   tmux new-session -s "$session_name" "command codex ${quoted_args}"
+}
+
+# opensuse coimmand not found handler
+command_not_found_handler() {
+    local cnf_bin=${COMMAND_NOT_FOUND_BIN:-/usr/bin/cnf}
+    if [[ -x "$cnf_bin" ]]; then
+        "$cnf_bin" "${(Q)1}"
+    fi
+    return 127
 }
 
 # opencode
