@@ -1,24 +1,23 @@
 {
   "logo": {
     "type": "builtin",
-    "source": "Fedora",
     "printRemaining": true,
     "padding": {
       "top": 0,
       "left": 0,
       "right": 2
-    },
-    "color": {
-      "1": "#5277c3",
-      "2": "#7ebae4"
     }
+    // "color": {
+      // "1": "#5277c3",
+      // "2": "#7ebae4"
+    // }
   },
   "display": {
-    "separator": ": ",
-    "color": {
-      "keys": "#7ebae4",
-      "title": "#5277c3"
-    },
+    // "separator": ": ",
+    // "color": {
+      // "keys": "#7ebae4",
+      // "title": "#5277c3"
+    // },
     "bar": {
       "width": 10,
       "char": {
@@ -45,6 +44,7 @@
     {
       "type": "packages",
       "format": "{rpm} (rpm), {appimage} (app), {flatpak-system} (fp-s), {flatpak-user} (fp-u)"
+      // "format": "{rpm} (rpm), {flatpak-system} (fp-s), {flatpak-user} (fp-u)"
     },
     "shell",
     "display",

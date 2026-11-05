@@ -2,6 +2,11 @@
 # Oh My Zsh
 # ──────────────────────────────────────────────
 
+# auto update omz
+zstyle ':omz:update' mode auto
+# silently update omz
+# zstyle ':omz:update' verbose silent
+
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME=""
@@ -22,7 +27,7 @@ source "$ZSH/oh-my-zsh.sh"
 # ──────────────────────────────────────────────
 
 HISTFILE="$HOME/.zsh_history"
-HISTSIZE=10000
+HISTSIZE=50000
 SAVEHIST=10000
 
 
@@ -31,7 +36,7 @@ SAVEHIST=10000
 # ──────────────────────────────────────────────
 
 alias ll="ls -l"
-alias update="sudo nixos-rebuild switch"
+alias update='sudo dnf upgrade --refresh -y && flatpak update --user -y && sudo flatpak update --system -y'
 alias hypr="start-hyprland"
 alias clfetch="clear && fastfetch"
 
@@ -41,8 +46,10 @@ alias ubumount='sshfs root@192.168.105.118:/ ~/remote/root@ubuntu'
 alias dkmount='sshfs dk@192.168.105.118:/home/dk/ ~/remote/dk@ubuntu'
 alias media='sshfs dk@192.168.105.118:/data/ ~/remote/media'
 
-alias cpfonts='sudo rm -rf "$HOME/.local/share/fonts"; mkdir -p "$HOME/.local/share/fonts" && cp -L /run/current-system/sw/share/X11/fonts/* "$HOME/.local/share/fonts/"'
-alias tailget='sudo tailscale file get ~/Downloads'
+# only for nixos, unsafe for fedora
+# alias cpfonts='sudo rm -rf "$HOME/.local/share/fonts"; mkdir -p "$HOME/.local/share/fonts" && cp -L /run/current-system/sw/share/X11/fonts/* "$HOME/.local/share/fonts/"'
+alias tailget='tailscale file get ~/Downloads'
+alias python='python3'
 
 
 # ──────────────────────────────────────────────
@@ -71,7 +78,7 @@ y() {
 # Prompt
 # ──────────────────────────────────────────────
 
-PROMPT='%F{blue}%B%n@%m %~
+PROMPT='%F{green}%B%n@%m %~
 >>%f%b '
 
 
@@ -93,7 +100,8 @@ export VISUAL=nvim
 
 
 # >>> Codex installer >>>
-export PATH="/home/dk/.local/bin:$PATH"
+typeset -U path
+path=("$HOME/.local/bin" $path)
 # <<< Codex installer <<<
 
 
@@ -115,3 +123,15 @@ codex() {
   quoted_args="${(j: :)${(q)@}}"
   tmux new-session -s "$session_name" "command codex ${quoted_args}"
 }
+
+# opensuse coimmand not found handler
+command_not_found_handler() {
+    local cnf_bin=${COMMAND_NOT_FOUND_BIN:-/usr/bin/cnf}
+    if [[ -x "$cnf_bin" ]]; then
+        "$cnf_bin" "${(Q)1}"
+    fi
+    return 127
+}
+
+# opencode
+export PATH=/home/dk/.opencode/bin:$PATH
