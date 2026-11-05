@@ -82,3 +82,4 @@ codex() {
 export EDITOR=/snap/bin/nvim
 export VISUAL=/snap/bin/nvim
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
