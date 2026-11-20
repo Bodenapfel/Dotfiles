@@ -1,3 +1,8 @@
+# Command search path
+typeset -U path
+path=("$HOME/.opencode/bin" "$HOME/.local/bin" "${path[@]}" /usr/sbin)
+export PATH
+
 # ──────────────────────────────────────────────
 # Oh My Zsh
 # ──────────────────────────────────────────────
@@ -36,7 +41,7 @@ SAVEHIST=10000
 # ──────────────────────────────────────────────
 
 alias ll="ls -l"
-alias update='sudo dnf upgrade --refresh -y && flatpak update --user -y && sudo flatpak update --system -y'
+alias update='sudo zypper refresh && sudo zypper dup && flatpak update --user -y && sudo flatpak update --system -y'
 alias hypr="start-hyprland"
 alias clfetch="clear && fastfetch"
 
@@ -59,18 +64,23 @@ alias python='python3'
 # Run yazi and cd into the directory you exited from.
 y() {
   local tmp cwd
+  local status_code=0
 
   tmp="$(mktemp -t 'yazi-cwd.XXXXXX')" || return
 
-  yazi "$@" --cwd-file="$tmp"
+  {
+    yazi "$@" --cwd-file="$tmp" || status_code=$?
+    if (( status_code == 0 )); then
+      IFS= read -r cwd < "$tmp"
+      if [[ -n "$cwd" && "$cwd" != "$PWD" ]]; then
+        builtin cd -- "$cwd" || status_code=$?
+      fi
+    fi
+  } always {
+    rm -f -- "$tmp"
+  }
 
-  IFS= read -r cwd < "$tmp"
-
-  if [[ -n "$cwd" && "$cwd" != "$PWD" ]]; then
-    builtin cd -- "$cwd"
-  fi
-
-  rm -f -- "$tmp"
+  return "$status_code"
 }
 
 
@@ -78,7 +88,18 @@ y() {
 # Prompt
 # ──────────────────────────────────────────────
 
-PROMPT='%F{76}%B%n@%m %~
+autoload -Uz vcs_info add-zsh-hook
+add-zsh-hook precmd vcs_info
+
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr '+'
+zstyle ':vcs_info:git:*' unstagedstr '*'
+zstyle ':vcs_info:git:*' formats ' (%b%c%u)'
+zstyle ':vcs_info:git:*' actionformats ' (%b%c%u|%a)'
+
+setopt prompt_subst
+PROMPT='%F{76}%B%n@%m %~${vcs_info_msg_0_}
 >>%f%b '
 
 
@@ -86,7 +107,8 @@ PROMPT='%F{76}%B%n@%m %~
 # Startup
 # ──────────────────────────────────────────────
 
-if [[ -z "$NO_COWSAY" ]]; then
+if [[ -z "$NO_COWSAY" ]] &&
+   (( $+commands[cowthink] && $+commands[fortune] )); then
   cowthink -f tux "$(fortune -s)"
 fi
 
@@ -99,10 +121,6 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 
-# >>> Codex installer >>>
-typeset -U path
-path=("$HOME/.local/bin" $path)
-# <<< Codex installer <<<
 
 
 # misc
@@ -124,7 +142,7 @@ codex() {
   tmux new-session -s "$session_name" "command codex ${quoted_args}"
 }
 
-# opensuse coimmand not found handler
+# opensuse command not found handler
 command_not_found_handler() {
     local cnf_bin=${COMMAND_NOT_FOUND_BIN:-/usr/bin/cnf}
     if [[ -x "$cnf_bin" ]]; then
@@ -133,5 +151,3 @@ command_not_found_handler() {
     return 127
 }
 
-# opencode
-export PATH=/home/dk/.opencode/bin:$PATH
