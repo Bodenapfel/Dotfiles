@@ -30,7 +30,21 @@ function y() {
 export LS_COLORS='di=01;34:ln=01;36:or=01;31:ex=01;32:fi=00:bd=40;33;01:cd=40;33;01:so=01;35:pi=40;33'
 
 # custom prompt:
-PROMPT='%F{166}%B%n@%m %~ 
+# PROMPT='%F{166}%B%n@%m %~ 
+# >>%f%b '
+
+autoload -Uz vcs_info add-zsh-hook
+add-zsh-hook precmd vcs_info
+
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr '+'
+zstyle ':vcs_info:git:*' unstagedstr '*'
+zstyle ':vcs_info:git:*' formats ' (%b%c%u)'
+zstyle ':vcs_info:git:*' actionformats ' (%b%c%u|%a)'
+
+setopt prompt_subst
+PROMPT='%F{166}%B%n@%m %~${vcs_info_msg_0_}
 >>%f%b '
 
 # terminal config:
